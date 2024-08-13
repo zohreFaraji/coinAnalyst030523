@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Mooli&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+    <link rel="stylesheet" href="font/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-repeat: repeat, no-repeat;
+            background-size: auto;
+        }
+
+        main {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            margin-top: 70px;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            padding-top: 35px;
+            -webkit-text-stroke: 3px #FD9A39;
+            text-shadow: 0 0 4px #FD9A39;
+            animation: animeTxt 3s infinite alternate;
+            font-size: 135px;
+            font-weight: bold;
+            font-family: "Roboto", sans-serif;
+            color: #dadfe7;
+        }
+
+        .rec {
+            width: 650px;
+            height: 400px;
+            background-image: linear-gradient(45deg, rgb(255, 235, 59), rgb(255, 111, 0));
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+            >.right {
+                background-color: white;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 30px, rgba(0, 0, 0, 0.23) 0px 6px 10px;
+                height: 460px;
+                width: 323px;
+                margin-top: -30px;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 3;
+
+                >.cardRight {
+                    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
+                    transform: rotate(45deg);
+                    width: 80px;
+                    height: 120px;
+                    position: absolute;
+                    right: -27px;
+                    bottom: -50px;
+                    background-color: #ff9800;
+                    animation: anime8 1.5s forwards;
+                }
+
+                .cardHeader {
+                    border-bottom: 1px solid #f0f0f0;
+                    margin: 20px;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                    position: relative;
+                    transition: all 0.2s;
+
+                    >.bitcoin {
+                        color: #3c3c3c;
+                        font-size: 30px;
+                        font-weight: 100;
+                        text-transform: uppercase;
+                    }
+
+                    >h3 {
+                        text-transform: uppercase;
+                        font-size: 15px;
+                        font-weight: 300;
+                        color: #ff9800;
+                    }
+
+                    .rightRank {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        display: flex;
+                        justify-content: end;
+
+                        >.rank,
+                        .number {
+                            font-weight: 400;
+                            text-transform: uppercase;
+                            font-size: 20px;
+                        }
+
+                        >.rank {
+                            color: #c8c8c8;
+                        }
+
+                        >.number {
+                            color: #ff9800;
+                            margin-left: 6px;
+                        }
+                    }
+                }
+
+                .cardBody {
+                    margin: 0 20px;
+                    transition: all 0.2s;
+                    color: #3c3c3c;
+
+                    >.value1 {
+                        display: flex;
+
+                        >.value {
+                            font-size: 40px;
+                            font-weight: 100;
+                        }
+
+                        .h124h {
+                            color: #66bb6a;
+                            font-size: 20px;
+                            font-weight: 100;
+                        }
+                    }
+
+                    >.value2 {
+                        margin-top: 30px;
+                        color: #3c3c3c;
+                        font-family: "Roboto", sans-serif;
+
+                        >.val2 {
+                            font-size: 20px;
+                            font-weight: 300;
+                            color: #3c3c3c;
+                        }
+
+                        >.label {
+                            margin-top: 4px;
+                            color: #3c3c3c;
+
+                            >h1 {
+                                color: #c8c8c8;
+                                font-size: 12px;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+
+                    >.value3 {
+                        margin-top: 30px;
+                        color: #3c3c3c;
+                        font-family: "Roboto", sans-serif;
+
+                        >.val3 {
+                            font-size: 20px;
+                            font-weight: 300;
+                            color: #3c3c3c;
+                        }
+
+                        >.label {
+                            margin-top: 4px;
+                            color: #3c3c3c;
+
+                            >h1 {
+                                color: #c8c8c8;
+                                font-size: 12px;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+
+                    >.value4 {
+                        margin-top: 30px;
+                        color: #3c3c3c;
+                        font-family: "Roboto", sans-serif;
+
+                        >.val4 {
+                            font-size: 20px;
+                            font-weight: 300;
+                            color: #3c3c3c;
+                        }
+
+                        >.label {
+                            margin-top: 4px;
+                            color: #3c3c3c;
+
+                            >h1 {
+                                color: #c8c8c8;
+                                font-size: 12px;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+
+                    .btn {
+                        background-image: linear-gradient(45deg, rgb(255, 235, 59), rgb(255, 111, 0));
+                        margin: 30px auto 0;
+                        border-radius: 5px;
+                        padding: 15px;
+                        color: #929292;
+                        letter-spacing: 0.7px;
+                        font-weight: bold;
+                        font-size: 16px;
+                        width: 160px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        &:hover {
+                            box-shadow: 5px 5px 20px 5px #FD9A39;
+                            color: #707070;
+                            transform: scale(1.02);
+                            transition: 0.3s ease-in-out;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .rec1 {
+                width: 300px;
+                height: 280%;
+                position: absolute;
+                top: -50%;
+                left: 0;
+                background-color: transparent;
+
+                >.coin {
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: absolute;
+                    left: -40px;
+                    transform: translateY(-50%);
+                    width: 260px;
+                    height: 260px;
+                    z-index: 3;
+                    border-radius: 1000px;
+                    transition: all 0.2s;
+                    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 30px, rgba(0, 0, 0, 0.23) 0px 6px 10px;
+                }
+
+                .coin1 {
+                    top: 25%;
+                    transform: translateY(0);
+                    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1468070/btc.svg);
+                    animation: anime 2s forwards;
+                }
+
+                >.txt {
+                    bottom: 56%;
+                    height: 120px;
+                    margin: 10px;
+                    position: absolute;
+
+                    left: 95px;
+                    transform: rotate(-90deg);
+                    transition: all 0.2s;
+                    width: 320px;
+                    z-index: 2;
+
+                    >h1 {
+                        color: rgba(255, 255, 255, 0.2);
+                        font-size: 150px;
+                        font-weight: 700;
+                        height: 120px;
+                        line-height: 120px;
+                        margin: 0px;
+                        animation: anime9 2.5s forwards;
+                    }
+                }
+            }
+        }
+
+        @keyframes anime {
+            0% {
+                transform: translateY(30px);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes anime8 {
+            0% {
+                transform: rotate(45deg)translateX(60px);
+            }
+
+            100% {
+                transform: rotate(45deg);
+            }
+        }
+
+        @keyframes anime9 {
+            0% {
+                transform: translateY(110px);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes animeTxt {
+            0% {
+                transform: scale(0.9);
+            }
+
+            100% {
+                opacity: 0.9;
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes animeTxt {
+            0% {
+                transform: scale(0.9);
+            }
+
+            100% {
+                opacity: 0.9;
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes anime1 {
+            0% {
+                border-radius: 20px;
+                border: 2px solid #f7a34f;
+            }
+
+            33% {
+                border-radius: 20px;
+                border: 2px solid rgb(255, 111, 0);
+            }
+
+            100% {
+                border-radius: 20px;
+                border: 2px solid rgb(255, 128, 9);
+            }
+        }
+
+        @keyframes anime2 {
+            0% {
+                border-radius: 20px;
+                border: 2px solid #4FC3F7;
+            }
+
+            33% {
+                border-radius: 20px;
+                border: 2px solid #41c2fd;
+            }
+
+            100% {
+                border-radius: 20px;
+                border: 2px solid #00aeff;
+            }
+        }
+
+        @keyframes anime3 {
+            0% {
+                border-radius: 20px;
+                border: 2px solid #66bb6a;
+            }
+
+            33% {
+                border-radius: 20px;
+                border: 2px solid #66bb6a;
+            }
+
+            100% {
+                border-radius: 20px;
+                border: 2px solid #5efc66;
+            }
+        }
+
+        @keyframes anime5 {
+            0% {
+                transform: scale(0.9);
+            }
+
+            100% {
+                transform: scale(1.01);
+            }
+        }
+
+        /* start bottomFixedImage */
+        .bottomImage {
+            position: absolute;
+            bottom: 20px;
+            right: 5px;
+            width: 200px;
+            height: 110px;
+
+            >.imgFixed {
+                width: 90px;
+                height: 90px;
+                position: fixed;
+                bottom: 33px;
+                right: 40px;
+                z-index: 1000;
+                animation: anime5 1.5s infinite alternate;
+
+                >img {
+                    width: 110%;
+                    height: 110%;
+                    border: 6px solid rgba(54, 54, 54, 0.062);
+                    animation: anime1 3s infinite alternate;
+                    transform: rotate(15deg);
+                    object-fit: cover;
+                    border-radius: 50%;
+                    position: relative;
+                    z-index: 999;
+                    transition: all .6s ease-in-out;
+                    box-shadow: 0 0 10px rgb(253, 144, 61), 0 0 20px rgb(252, 130, 38), 0 0 30px rgb(253, 141, 56), 0 0 40px rgb(255, 140, 53);
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: perspective(700px) rotateY(10deg);
+                    }
+                }
+
+                >a {
+                    width: 40px;
+                    height: 40px;
+                    z-index: 998;
+                    position: fixed;
+                    bottom: 50px;
+                    right: 38px;
+                    transition: all 1s ease-in-out;
+                    border: 2px solid rgb(255, 111, 0);
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(255, 255, 255, 0.616);
+
+                    >i {
+                        color: black;
+                        font-size: 20px;
+                    }
+
+                    &:hover {
+                        transform: scale(1.05);
+                        background-color: rgb(255, 135, 44);
+                        border: 3px solid #e2e1e1;
+
+                        filter: hue-rotate(40%) brightness(110%) contrast(120%);
+
+                        >i {
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            &:hover>.imgFixed>a {
+
+                &:nth-of-type(1) {
+                    bottom: -4px;
+                    right: 110px;
+                }
+
+                &:nth-of-type(2) {
+                    bottom: 43px;
+                    right: 110px;
+                }
+
+                &:nth-of-type(3) {
+
+                    bottom: 90px;
+                    right: 110px;
+                }
+            }
+        }
+
+        /* end bottomFixedImage */
+    </style>
+</head>
+
+<body>
+    <p class="header">Coin Analyst</p>
+    <main>
+        <!-- start bottomFixedImage -->
+        <div class="bottomImage">
+            <figure class="imgFixed"><img src="img/img/4.png" alt="">
+                <a href="https://github.com/zohreFaraji"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/zohre-faraji-41822315a/"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/zohrefaraji212/"><i class="bi bi-instagram"></i></a>
+            </figure>
+        </div>
+        <!-- end bottomFixedImage -->
+        <div class="rec">
+            <div class="right">
+                <div class="cardRight"></div>
+                <div class="cardHeader">
+                    <h1 class="bitcoin">bitcoin</h1>
+                    <h3 class="abb">btc</h3>
+                    <div class="rightRank">
+                        <h1 class="rank">rank</h1>
+                        <h1 class="number">1</h1>
+                    </div>
+                </div>
+                <div class="cardBody">
+                    <div class="value1">
+                        <h1 class="value">9,159.68</h1>
+                        <h1 class="h124h">1.3%</h1>
+                    </div>
+                    <div class="value2">
+                        <h1 class="val2">$168,679,164,784</h1>
+                        <div class="label">
+                            <h1>Market Cap</h1>
+                        </div>
+                    </div>
+                    <div class="value3">
+                        <h1 class="val3">$18,357,859,654</h1>
+                        <div class="label">
+                            <h1>Volume</h1>
+                        </div>
+                    </div>
+
+                    <div class="value4">
+                        <h1 class="val4">18,415,393 BTC</h1>
+                        <div class="label">
+                            <h1>Circulating Supply</h1>
+                        </div>
+                    </div>
+                    <div class="btn">Get Latest Price</div>
+                </div>
+            </div>
+            <div class="rec1">
+                <div class="coin coin1"></div>
+                <div class="txt">
+                    <h1 class="coinText">BTC</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+
+        // exist our data
+        const data = [
+            {
+                id: 1,
+                name: "Bitcoin",
+                symbol: "BTC",
+                rank: 1,
+                price: "9,159.68",
+                change24hr: "1.3",
+                cap: "168,679,164,784",
+                volume: "18,357,859,654",
+                circulating: "18,415,393",
+                color: 'FD9A39',
+                color1: 'FFEB3B',
+                color2: 'FF6F00'
+            },
+            {
+                id: 2,
+                name: "Ethereum",
+                symbol: "ETH",
+                rank: 2,
+                price: "230.47",
+                change24hr: "1.44",
+                cap: "25,699,790,870",
+                volume: "7,122,827,657",
+                circulating: "111,511,971",
+                color: '4FC3F7',
+                color1: '4fc3f7',
+                color2: '0d47a1'
+            },
+
+            {
+                id: 3,
+                name: "Tether",
+                symbol: "USDT",
+                rank: 3,
+                price: "1.00",
+                change24hr: "0.35",
+                cap: "9,224,337,233",
+                volume: "22,616,885,934",
+                circulating: "9,187,991,663",
+                color: '66bb6a',
+                color1: '66bb6a',
+                color2: 'cddc39'
+            }
+        ]
+
+        const priceVal = document.querySelector('.cardBody>.value1>.value')
+        const priceTitle = document.querySelector('.rec>.right>.cardHeader>.bitcoin')
+        const abb = document.querySelector('.rec>.right>.cardHeader>.abb')
+        const prsColor = document.querySelector('.rec>.right>.cardRight')
+        const btn = document.querySelector('.cardBody>.btn')
+        const number = document.querySelector('.rightRank>.number')
+        const coinText = document.querySelector('.rec1>.txt>.coinText')
+        const rec = document.querySelector('.rec')
+        const h24 = document.querySelector('.cardBody>.value1>.h124h')
+        const val2 = document.querySelector('.cardBody>.value2>.val2')
+        const val3 = document.querySelector('.cardBody>.value3>.val3')
+        const val4 = document.querySelector('.cardBody>.value4>.val4')
+        const rightHeader = document.querySelector('.rec>.right>.cardHeader')
+        const rightBody = document.querySelector('.rec>.right>.cardBody')
+        const coin1 = document.querySelector('.rec1>.coin1')
+        const imgBottom = document.querySelector('.bottomImage>.imgFixed>img')
+        const imgBottomA = document.querySelector('.bottomImage>.imgFixed>a')
+        const txtHeader = document.querySelector('.header')
+        analystData(data.length)
+        btn.addEventListener('mouseover', function () {
+            this.style.boxShadow = `5px 5px 20px 5px #${data[flag].color}`;
+        });
+        btn.addEventListener('mouseout', function () {
+            this.style.transition = 'box-shadow 0.3s';
+            this.style.boxShadow = 'none';
+        });
+        btn.addEventListener('click', function (event) {
+            event.preventDefault();
+            this.style.boxShadow = 'none';
+            this.style.transition = 'none';
+            void this.offsetWidth;
+            this.style.boxShadow = `5px 5px 20px 5px #${data[flag].color}`;
+            setTimeout(() => {
+                this.style.transition = 'box-shadow 0.3s';
+            }, 50);
+        });
+        let flag = 0
+        function analystData() {
+            btn.addEventListener('click', () => {
+                if (flag < data.length - 1) {
+                    flag += 1
+                }
+                else {
+                    coinText
+                    flag = 0
+                }
+                val2.innerHTML = data[flag].cap
+                val3.innerHTML = data[flag].volume
+                val4.innerHTML = data[flag].circulating + ' ' + data[flag].symbol
+                number.innerHTML = flag + 1
+                number.style.color = '#' + data[flag].color
+                priceVal.innerHTML = '$' + data[flag].price
+                priceTitle.innerHTML = data[flag].name
+                abb.innerHTML = data[flag].symbol
+                abb.style.color = '#' + data[flag].color
+                prsColor.style.background = '#' + data[flag].color
+                coinText.innerHTML = data[flag].symbol
+                coinText.style.animation = 'none';
+                coinText.offsetWidth
+                coinText.style.animation = 'anime9 1.5s forwards';
+                rightHeader.style.animation = '';
+                rightHeader.offsetWidth
+                rightHeader.style.animation = 'anime 1.5s forwards';
+                rightBody.style.animation = '';
+                rightBody.offsetWidth
+                rightBody.style.animation = 'anime 1.5s forwards';
+                h24.innerHTML = data[flag].change24hr + '%'
+                h24.style.color = '#' + data[flag].color
+                coin1.style.animation = 'none';
+                void coin1.offsetWidth;
+                coin1.style.animation = 'anime 2s forwards';
+                prsColor.style.animation = 'none';
+                void prsColor.offsetWidth;
+                prsColor.style.animation = 'anime8 2s forwards';
+                let icon = data[flag].symbol.toLowerCase()
+                coin1.style.backgroundImage = `url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1468070/${icon}.svg)`;
+                coin1.style.display = 'block';
+                txtHeader.style.webkitTextStroke = `3px #${data[flag].color}`;
+                txtHeader.style.textShadow = `0 0 4px #${data[flag].color}`;
+
+                // add border & background & box-shadow bottom photo 
+                imgBottom.style.boxShadow = `5px 5px 20px 5px #${data[flag].color1}, 5px 5px 20px 5px #${data[flag].color2}`;
+                imgBottom.style.animation = 'none';
+                void imgBottom.offsetWidth;
+                imgBottom.style.animation = 'anime' + (flag + 1) + ' 3s infinite alternate';
+
+
+                const imgFixedLinks = document.querySelectorAll('.bottomImage>.imgFixed>a');
+                imgFixedLinks.forEach(link => {
+                    link.style.border = 'none';
+                    void link.offsetWidth;
+                    link.style.border = `2px solid #${data[flag].color}`;
+
+                    link.addEventListener('mouseenter', () => {
+                        link.style.backgroundColor = `#${data[flag].color}`;
+                        link.style.borderColor = '#e2e1e1';
+                        link.querySelector('i').style.color = 'white';
+                    });
+
+                    link.addEventListener('mouseleave', () => {
+                        link.style.backgroundColor = 'rgba(255, 255, 255, 0.616)';
+                        link.style.borderColor = `#${data[flag].color}`;
+                        link.querySelector('i').style.color = 'black';
+                    });
+                });
+                btn.style.backgroundImage = `linear-gradient(45deg, #${data[flag].color1}, #${data[flag].color2})`;
+                rec.style.backgroundImage = `linear-gradient(45deg, #${data[flag].color1}, #${data[flag].color2})`;
+            })
+        }
+    </script>
+</body>
+
+</html>
